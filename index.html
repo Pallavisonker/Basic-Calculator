@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body,html{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       }
+       .container{
+        background-color: rgb(40, 36, 36);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .box{
+        height: 500px;
+        width: 500px;
+        background-color: gray;
+        border-radius: 15px; 
+        border: 5px solid gold;
+        text-align: center;
+       }
+       h2{
+        font-size: 30px;
+       }    
+        #B1,#B2,#B3,#B4{
+            background-color:black;
+            width: 50px;
+            height: 35px;
+            color: white;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        B1:hover,B2:hover,B3:hover,B4:hover{
+            transform: scale(1.09);
+            height: 50px;
+            width: 30px;
+        }
+        #num1,#num2{
+            color : white;
+            padding: 14px 20px; 
+            margin: 8px 0;
+            background-color: black;
+            border: 2px solid gold;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+      <div class="box">
+        <h2>Basic Calcultor</h2>
+        <input type="number" id="num1" placeholder="Eneter number "><br><br>
+        <input type="number" id="num2" placeholder="Eneter number "><br><br>
+        <button id="B1" onclick="add()">+</button>
+        <button id=B2 onclick="sub()">-</button>
+        <button  id=B3 onclick="mult()">x</button>
+        <button id=B4 onclick="div()">/</button>
+      </div>
+   </div>
+    <script>
+         function add(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let sum = a+b;
+            alert(sum);
+        }
+        function sub(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let sub = a-b;
+            alert(sub);
+        }
+        function mult(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let mult = a*b;
+            alert(mult);
+        }
+        function div(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let div = a/b;
+            alert(div);
+        }
+    </script>
+</body>
+</html>
